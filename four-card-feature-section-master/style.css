@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100wh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text-container {
+    width: 36%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4%;
+}
+
+.text-container .title {
+    font-size: 2rem;
+    font-weight: 300;
+    color: rgba(81, 81, 89, 225);
+    text-align: center;
+}
+
+.text-container .powered-by {
+    font-size: 2rem;
+    color: rgba(65, 67, 62, 225);
+    text-align: center;
+}
+
+.text-container .descripton {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 12px;
+    color: rgba(172, 171, 176, 225);
+}
+
+.cards-container {
+    margin: 4% 0 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 86%;
+    height: 66vh;
+}
+
+.cards-container> :nth-child(2) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cards-container .card {
+    width: 27vw;
+    height: 30vh;
+    /* border: 1px solid #000; */
+    border-radius: 8px;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 6px 12px 8px 0 rgb(0 0 0 / 20%), -6px 0 8px 0 rgb(0 0 0 / 20%);
+}
+
+.clr-green {
+    border-top: 4px solid #40d6d1;
+}
+
+.clr-red {
+    border-top: 4px solid #ea5551;
+}
+
+.clr-yellow {
+    border-top: 4px solid #fbad4b;
+}
+
+.clr-blue {
+    border-top: 4px solid #559cee;
+}
+
+.card .card-title {
+    font-size: 1.375rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: rgba(87, 89, 104, 225);
+}
+
+.card .card-description {
+    color: rgba(171, 172, 175, 225);
+    font-size: 0.875rem;
+}
+
+.card .card-icon {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    width: 2rem;
+}
+
+@media screen and (max-width: 740px) {
+    .text-container {
+        width: 70%;
+    }
+    .cards-container {
+        flex-direction: column;
+    }
+    .cards-container .card {
+        width: 80vw;
+        margin: 12px 0;
+    }
+}
