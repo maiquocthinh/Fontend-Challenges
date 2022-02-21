@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgba(10, 12, 27, 255);
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Inter', sans-serif;
+}
+
+.card {
+	background-color: rgba(28, 25, 55, 255);
+	display: flex;
+	flex-direction: row-reverse;
+	width: 80%;
+	position: relative;
+}
+
+.card .card-image {
+	content: url('./images/image-header-desktop.jpg');
+	width: 48%;
+	margin-left: 10px;
+}
+
+.card .card-image-overplay {
+	background-color: rgba(168, 96, 211, .6);
+	width: 48%;
+	height: 100%;
+	margin-left: 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.card-content {
+	margin: 8% 0 8% 6%;
+}
+
+.card-content .content-title {
+	color: #fff;
+	font-size: 30px;
+}
+
+.card-content .content-title span {
+	color: rgba(168, 96, 211, 255);
+	text-justify: left;
+}
+
+.card-content .content-description {
+	color: rgba(129, 127, 152, 255);
+	text-justify: left;
+	margin: 20px 0;
+}
+.card-content .content-stats{
+	display: flex;
+	justify-content: flex-start;
+	margin-top: 48px;
+}
+.card-content .stats-item{
+	flex-grow: 1;
+}
+.card-content .stats-item > h4{
+	color: #fff;
+	font-size: 16px;
+}
+.card-content .stats-item > p{
+	color: rgba(129, 127, 152, 255);
+	font-size: 12px;
+	text-transform: uppercase;
+}
+@media(max-width: 740px){
+	.card .card-image,
+	.card .card-image-overplay{
+		border-radius: 16px 16px 0 0;
+	}
+	.card{
+		flex-direction: column;
+		border-radius: 16px;
+		width: 80vw;
+	}
+	.card .card-image {
+		content: url('./images/image-header-mobile.jpg');
+		width: 100%;
+		margin: 0;
+	}
+	.card .card-image-overplay{
+		width: 100%;
+		height: 211px;
+		margin: 0;
+	}
+	.card-content .content-title span,
+	.card-content .content-description{
+		text-align: center;
+	}
+	.card-content .content-stats{
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 0;
+	}
+	.card-content .stats-item{
+		flex-grow: none;
+		width: 70px;
+		margin-top: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 28px;
+	}
+	.card-content .stats-item > h4{
+		font-size: 24px;
+	}
+	.card-content .stats-item > p{
+		font-size: 20px;
+	}
+}

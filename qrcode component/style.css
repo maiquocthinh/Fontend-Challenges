@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #d5e1ef;
+	font-family: 'Dongle', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50vh;
+	transform: translateY(-50%);
+}
+
+.attribution {
+	font-size: 20px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+.card {
+	background-color: #fff;
+	width: 300px;
+	min-height: 450px;
+	border-radius: 10px;
+}
+
+.card img {
+	border-radius: 10px;
+	width: 90%;
+	margin: 5%;
+}
+
+.card h3,
+.card p {
+	text-align: center;
+	line-height: 100%;
+	margin: 0 20px 20px;
+}
+
+.card h3 {
+	font-size: 35px;
+	opacity: .8;
+}
+
+.card p {
+	font-size: 25px;
+	color: #333;
+}
+
+@media only screen and (max-width: 900px) {
+	.card h3,
+	.card p {
+		margin: 0 20px 10px;
+	}
+}

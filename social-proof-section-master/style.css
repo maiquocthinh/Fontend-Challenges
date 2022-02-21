@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    margin: 6vh 0;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80vw;
+}
+
+.top-wrapper {
+    display: flex;
+}
+
+.main-content,
+.rates {
+    flex: 1;
+}
+
+.main-content .title {
+    width: 80%;
+    font-size: 50px;
+    font-weight: 1000;
+    color: rgba(77, 30, 79, 255);
+}
+
+.main-content .content {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+    color: rgba(167, 160, 167, 255);
+    margin-top: 16px;
+}
+
+.rates .rate-item {
+    height: 60px;
+    background-color: rgba(247, 242, 248, 255);
+    margin: 25px 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.rates>:nth-child(1) {
+    width: calc(90% - 60px);
+    margin-left: 0;
+}
+
+.rates>:nth-child(2) {
+    width: calc(90% - 30px);
+    margin-left: 30px;
+}
+
+.rates>:nth-child(3) {
+    width: 90%;
+    margin-left: 60px;
+}
+
+.rate-item .star {
+    width: 40%;
+    height: 15px;
+}
+
+.rate-item .rate-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(81, 31, 80, 255);
+}
+
+.cards {
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cards .card-item {
+    background-color: rgba(81, 31, 80, 255);
+    padding: 28px;
+    border-radius: 12px;
+    margin: 0 12px;
+    width: calc(100% / 3);
+}
+
+.cards> :nth-child(1) {
+    margin-top: 0;
+    height: calc(100% - 48px);
+}
+
+.cards> :nth-child(2) {
+    margin-top: 24px;
+    height: calc(100% - 24px);
+}
+
+.cards> :nth-child(3) {
+    margin-top: 48px;
+    height: 100%;
+}
+
+.card-item .card-header {
+    display: flex;
+}
+
+.card-header img {
+    border-radius: 50%;
+    width: 50px;
+}
+
+.card-header-content {
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-header .card-name {
+    color: #fff;
+    font-size: 18px;
+}
+
+.card-header .card-subtext {
+    color: rgba(175, 98, 151, 255);
+    font-size: 18px;
+}
+
+.card-content {
+    margin-top: 32px;
+    color: rgba(246, 224, 246, 255);
+    font-size: 16px;
+}
+
+@media screen and (max-width: 741px) {
+    .top-wrapper {
+        flex-direction: column;
+    }
+    .main-content .title,
+    .main-content .content {
+        width: auto;
+        text-align: center;
+    }
+    .main-content .title {
+        font-size: 40px;
+    }
+    .main-content .content {
+        font-size: 18px;
+        margin: 16px;
+    }
+    .rates .rate-item {
+        width: 100%;
+        height: 74px;
+        margin: 16px 0;
+        flex-direction: column;
+    }
+    .cards {
+        flex-direction: column;
+    }
+    .cards .card-item {
+        height: auto;
+        width: 100%;
+        margin: 16px 0;
+    }
+    .rate-item .star {
+        width: auto;
+    }
+}

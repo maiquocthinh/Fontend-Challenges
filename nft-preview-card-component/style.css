@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+:root {
+	--skyblue: rgba(2, 254, 253, 255);
+	--lightsteelblue: rgba(99, 119, 149, 255)
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgba(13, 26, 45, 255);
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Quicksand', sans-serif;
+}
+
+.card {
+	background-color: rgba(21, 39, 63, 255);
+	width: 450px;
+	min-height: 300px;
+	margin: 5%;
+	border-radius: 20px;
+	box-shadow: 0 0 0 26px rgba(16, 25, 44, 255);
+}
+
+.card-wrapper {
+	width: 90%;
+	height: 90%;
+	margin: 5%;
+}
+
+.card .card-img-wrap{
+	position: relative;
+}
+
+.card .card-img-wrap img {
+	width: 100%;
+	border-radius: 12px;
+}
+.card .card-img-wrap .card-img-overplay{
+	background-color: var(--skyblue);
+	opacity: .4;
+	border-radius: 12px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: none;
+}
+.card .card-img-wrap .card-icon-view{
+	width: 50px;
+	position: absolute;
+	top: calc(50% - 25px);
+	left: calc(50% - 25px);
+	display: none;
+}
+
+.card .card-img-wrap:hover .card-img-overplay,
+.card .card-img-wrap:hover .card-icon-view{
+	display: block;
+}
+.card .card-title {
+	color: #fff;
+	font-size: 28px;
+	font-weight: 800;
+	margin: 28px 0;
+}
+
+.card .card-description {
+	color: var(--lightsteelblue);
+	font-size: 20px;
+	font-weight: 450;
+	margin-bottom: 28px;
+}
+
+.card .card-sect {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.card .card-coin,
+.card .card-time {
+	font-size: 20px;
+	display: flex;
+	align-items: center;
+}
+
+.card .card-coin img,
+.card .card-time img {
+	margin-right: 8px;
+}
+
+.card .card-coin {
+	color: var(--skyblue);
+	font-weight: 600;
+}
+
+.card .card-time {
+	color: var(--lightsteelblue);
+	font-weight: 700;
+}
+
+hr {
+	margin: 28px 0;
+	outline: none;
+	border: none;
+	border-top: 1.5px solid var(--lightsteelblue);
+	border-radius: 1px;
+	opacity: .6;
+}
+
+.card :last-child {
+	justify-content: flex-start;
+}
+
+.card .card-sect .card-author-avatar {
+	width: 46px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+}
+
+.card .card-sect .card-author-text {
+	margin-left: 20px;
+	color: var(--lightsteelblue);
+	font-size: 18px;
+	font-weight: 600;
+
+}
+
+.card .card-sect .card-author-text span {
+	color: #fff;
+	opacity: .8;
+}
+
+.card .card-title:hover,
+.card .card-sect .card-author-text span:hover{
+	color: var(--skyblue);
+	cursor: pointer;
+}
+
+/* Mobile */
+@media screen and (max-width: 740px) {
+	.card-wrapper {
+		width: 86%;
+		height: 86%;
+		margin: 7%;
+	}
+
+	.card .card-title {
+		font-size: 24px;
+		font-weight: 600;
+		margin: 20px 0;
+	}
+
+	.card .card-description {
+		font-size: 16px;
+		margin-bottom: 20px;
+	}
+
+	hr {
+		margin: 20px 0;
+	}
+
+	.card .card-coin,
+	.card .card-time,
+	.card .card-sect .card-author-text {
+		font-size: 16px;
+	}
+}
