@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.arrow-up {
+    width: 16px;
+    height: 12px;
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #af68ea, #6462e7);
+    background-repeat: no-repeats;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-wrapper {
+    background-color: #FFF;
+    width: 896px;
+    height: 560px;
+    border-radius: 28px;
+    display: flex;
+}
+
+.card-wrapper .images {
+    position: relative;
+    width: 48%;
+}
+
+.images .pattern {
+    width: 100%;
+    height: 100%;
+    background-size: 612px;
+    background-image: url('./images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: bottom -12px left -247px;
+}
+
+.images .illustration-woman {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 460px;
+    background-image: url(./images/illustration-woman-online-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: bottom 110px left -88px;
+    top: 0;
+}
+
+.images .illustration-box {
+    width: 140px;
+    height: 140px;
+    background-size: 174px;
+    background-image: url(./images/illustration-box-desktop.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 232px;
+    left: -84px;
+}
+
+.images .animation-box-out {
+    animation-name: move-box-out;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+}
+
+.images .animation-box-in {
+    animation-name: move-box-in;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move-box-out {
+    0% {
+        left: -84px;
+    }
+    100% {
+        left: -120px;
+    }
+}
+
+@keyframes move-box-in {
+    0% {
+        left: -120px;
+    }
+    100% {
+        left: -84px;
+    }
+}
+
+.faq {
+    width: 60%;
+}
+
+.faq .faq-title {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 52px 0 32px;
+}
+
+.faq .questions {
+    width: 80%;
+}
+
+.questions .question-container:hover {
+    cursor: pointer;
+    color: #dc8f75;
+}
+
+.questions .question-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0 16px;
+    border-bottom: 2px solid #e9e9e9;
+}
+
+.question-container .arrow-down {
+    width: 16px;
+    height: 12px;
+}
+
+.questions .anwser-container {
+    display: none;
+    border-bottom: 2px solid #e9e9e9;
+    padding: 12px 0 12px;
+}
+
+.questions .anwser-container .anwser {
+    font-size: 14px;
+    padding-left: 12px;
+}
+
+@media screen and (max-width: 741px) {
+    body {
+        height: 100%;
+    }
+    .card-wrapper {
+        flex-direction: column;
+        height: 100%;
+        width: 90%;
+        margin-top: 200px;
+        padding-bottom: 50px;
+        margin-bottom: 100px;
+    }
+    .card-wrapper .images {
+        width: 100%;
+        height: 120px;
+    }
+    .images .illustration-box {
+        display: none;
+    }
+    .images .pattern {
+        width: 360px;
+        height: 164px;
+        background-size: 90%;
+        background-image: url(./images/bg-pattern-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top 0 left 0;
+        position: absolute;
+        top: 0;
+        left: calc(50% - 160px);
+    }
+    .images .illustration-woman {
+        width: 350px;
+        height: 265px;
+        background-size: 90%;
+        background-image: url(./images/illustration-woman-online-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top 0 left 0;
+        position: absolute;
+        top: -150px;
+        left: calc(50% - 160px);
+    }
+    .faq {
+        width: 100%;
+    }
+    .faq .faq-title {
+        text-align: center;
+        margin-top: 100px;
+    }
+    .faq .questions {
+        width: 84%;
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+}

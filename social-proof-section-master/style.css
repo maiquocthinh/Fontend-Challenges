@@ -13,6 +13,9 @@ body {
     justify-content: center;
     margin: 6vh 0;
     font-family: 'Work Sans', sans-serif;
+    background: url('./images/bg-pattern-top-desktop.svg'), url('./images/bg-pattern-bottom-desktop.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: left 0 top 0, right 0 bottom 0;
 }
 
 .wrapper {
@@ -146,6 +149,11 @@ body {
 }
 
 @media screen and (max-width: 741px) {
+    body {
+        background: url('./images/bg-pattern-top-mobile.svg'), url('./images/bg-pattern-bottom-mobile.svg');
+        background-repeat: no-repeat, no-repeat;
+        background-position: top 0 left 0, bottom 0 right 0;
+    }
     .top-wrapper {
         flex-direction: column;
     }
